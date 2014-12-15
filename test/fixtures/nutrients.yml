@@ -1,0 +1,43 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  water: 9.99
+  energy_kcal: 9.99
+  protein: 9.99
+  lipid_total: 9.99
+  ash: 9.99
+  carbohydrate: 9.99
+  fiber: 9.99
+  sugar_total: 9.99
+  calcium: 9.99
+  iron: 9.99
+  magnesium: 9.99
+  phosphorous: 9.99
+  potassium: 9.99
+  sodium: 9.99
+  zinc: 9.99
+  copper: 9.99
+  manganese: 9.99
+  selenium: 9.99
+  vitamin_c: 9.99
+
+two:
+  water: 9.99
+  energy_kcal: 9.99
+  protein: 9.99
+  lipid_total: 9.99
+  ash: 9.99
+  carbohydrate: 9.99
+  fiber: 9.99
+  sugar_total: 9.99
+  calcium: 9.99
+  iron: 9.99
+  magnesium: 9.99
+  phosphorous: 9.99
+  potassium: 9.99
+  sodium: 9.99
+  zinc: 9.99
+  copper: 9.99
+  manganese: 9.99
+  selenium: 9.99
+  vitamin_c: 9.99

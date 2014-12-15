@@ -1,0 +1,11 @@
+<div class="jumbotron">
+	<h1>FoodWiki</h1>
+	<p>FoodWiki is a resource for information about the food you eat.</p>
+	
+	<p> Want to add your knowledge?</p>
+	<p>
+		<%= link_to "Sign In", new_user_session_path, class: 'btn btn primary' %>
+		<%= link_to "Sign Up", new_user_registration_path, class: 'btn btn-primary' %>
+		<%= link_to "Sign Out", destroy_user_session_path, class: 'btn btn-primary', :method => :delete %>
+	</p>
+</div>
