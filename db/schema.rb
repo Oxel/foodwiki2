@@ -11,7 +11,71 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141215165818) do
+ActiveRecord::Schema.define(version: 20141215193411) do
+
+  create_table "companies", force: true do |t|
+    t.string   "company_name"
+    t.string   "address_1"
+    t.string   "address_2"
+    t.string   "city"
+    t.string   "state"
+    t.string   "country"
+    t.string   "web_address"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "components", force: true do |t|
+    t.string   "component_name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "foodproducts", force: true do |t|
+    t.string   "food_name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "ingredients", force: true do |t|
+    t.string   "ingredient_name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "nutrients", force: true do |t|
+    t.decimal  "water"
+    t.decimal  "energy_kcal"
+    t.decimal  "protein"
+    t.decimal  "lipid_total"
+    t.decimal  "ash"
+    t.decimal  "carbohydrate"
+    t.decimal  "fiber"
+    t.decimal  "sugar_total"
+    t.decimal  "calcium"
+    t.decimal  "iron"
+    t.decimal  "magnesium"
+    t.decimal  "phosphorous"
+    t.decimal  "potassium"
+    t.decimal  "sodium"
+    t.decimal  "zinc"
+    t.decimal  "copper"
+    t.decimal  "manganese"
+    t.decimal  "selenium"
+    t.decimal  "vitamin_c"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "references", force: true do |t|
+    t.string   "author"
+    t.datetime "publication_date"
+    t.string   "title"
+    t.string   "place"
+    t.string   "publisher"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "name"
