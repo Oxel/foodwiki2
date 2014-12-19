@@ -1,12 +1,4 @@
 <h1>Enter a new Food Product</h1>
 
+	<%= render "form" %>
 
-<%= form_for(@foodproduct) do |f| %>
-  <p>
-    <%= f.label :food_name %><br />
-    <%= f.text_field :food_name %>
-</p>
-
- <%= f.submit %>
-
-<% end %>

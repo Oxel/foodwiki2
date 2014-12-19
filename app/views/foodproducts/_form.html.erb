@@ -1,0 +1,19 @@
+<%= form_for @foodproduct do |f| %>
+
+	<div class="field">
+		<%=f.label :foodproduct_name %>
+		<%=f.text_field :food_name %>
+	</div>
+
+	<%= f.fields_for :components do |builder| %>
+		<fieldset>
+		<%= builder.label :component_name, "Component" %>
+		<%= builder.text_area :component_name %>
+		</fieldset>
+	<% end %>
+
+	<div class="actions">
+		<% f.submit %>
+	</div>
+
+<% end %>
