@@ -30,7 +30,7 @@ class FoodproductsController < ApplicationController
     if @foodproduct.update_attributes(foodproduct_params)
       redirect_to @foodproduct
     else
-      flash[:error] = "Error saving topic. Please try again."
+      flash[:error] = "Error saving. Please try again."
       render :edit
     end
   end
@@ -38,7 +38,7 @@ class FoodproductsController < ApplicationController
   private
 
   def foodproduct_params
-  	params.require(:foodproduct).permit(:food_name, components_attributes: [:component_name])
+  	params.require(:foodproduct).permit(:food_name, :foodproduct_id, components_attributes: [:component_name, :foodproduct_id])
 	end
 
 end
