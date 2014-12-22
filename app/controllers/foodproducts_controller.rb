@@ -13,6 +13,7 @@ class FoodproductsController < ApplicationController
 
 	def new
 		@foodproduct = Foodproduct.new
+		@foodproducts.components.build
 	end
 
 	def create
