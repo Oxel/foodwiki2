@@ -1,5 +1,8 @@
 class FoodproductsController < ApplicationController
 
+  before_action :set_foodproduct, only: [:show, :edit, :update, :destroy]
+  # before_action :set_company 
+
 	def index
 	end
 
@@ -12,8 +15,9 @@ class FoodproductsController < ApplicationController
 	end
 
 	def new
-		@foodproduct = Foodproduct.new
-		@foodproducts.components.build
+    @foodproduct = Foodproduct.new
+		@foodproduct.components.build
+    @company = @foodproduct.build_company
 	end
 
 	def create
@@ -39,7 +43,15 @@ class FoodproductsController < ApplicationController
   private
 
   def foodproduct_params
-  	params.require(:foodproduct).permit(:food_name, :foodproduct_id, components_attributes: [:component_name, :foodproduct_id])
+  	params.require(:foodproduct).permit(:food_name, :company_id, :foodproduct_id, components_attributes: [:component_name, :foodproduct_id, :company_id], company_attributes: [:company_name, :foodproduct_id, :company_id])
 	end
+
+  def set_foodproduct
+    @foodproduct = Foodproduct.find(params[:id])
+  end
+
+  # def set_company
+  #  @company = Company.find(params[:company_id])
+  # end
 
 end

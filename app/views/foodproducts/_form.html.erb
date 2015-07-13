@@ -3,19 +3,24 @@
 	<div class="field">
 		<%=f.label :food_name %><br />
 		<%=f.text_field :food_name %>
+		<%=f.label :company_name %>
+		<%=f.text_field :company_name %>
 	</div>
-	<h1>Line7</h1>
-	<%= f.fields_for :components do |builder| %>
-	<h1>Line9</h1>
-		<fieldset>
-		<%= builder.label :component_name, "Component" %><br/>
-		<%= builder.text_area :component_name %>
-		</fieldset>
-		<h1>Line14</h1>
+	<div id="components">
+	<%= f.fields_for :components do |component| %>
+		<%= render 'component_fields', :f => component %>
 	<% end %>
-<h1>Line16<h1>
-	<div class="actions">
-		<% f.submit %>
 	</div>
-	<h1>Line20</h1>
+	<div id="companies">
+	<%= f.fields_for :company do |company| %>
+		<%= render 'company_fields', :f => company %>
+	<% end %>
+	</div>
+	<div class="links">
+	<%= link_to_add_association 'add component', f, :components %>
+	<%= link_to_add_association 'add company', f, :company %>
+	</div>
+	<div class="actions">
+		<%= f.submit %>
+	</div>
 <% end %>

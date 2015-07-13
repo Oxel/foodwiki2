@@ -1,6 +1,8 @@
 
 <h1><%= @foodproduct.food_name %></h1>
-
+<% @foodproduct.components.each do |component| %>
+	<%= component.component_name %>
+<% end %>
 
 <%= link_to 'Edit', edit_foodproduct_path %>
 <%= link_to 'Back', foodproducts_path %>
